@@ -1,0 +1,11 @@
+<h1>HEADER</h1>
+<div class="js-breadcrumb"></div>
+{% if request.session.isLoggedIn == 'true' %}
+<div>
+    <h3>Вы вошли в систему</h3>
+    <p><a href="/logout">Выйти из системы</a></p>
+</div>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'register' %}">Register</a>
+{% endif %}

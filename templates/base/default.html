@@ -1,0 +1,30 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+
+    <head>
+        {% include 'base/parts/head.html' %}
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+
+    <header>
+        {% include 'base/parts/header.html' %}
+    </header>
+
+    <body>
+
+        {% block content %} {% endblock %}
+
+        <footer>
+            {% include 'base/parts/footer.html' %}
+        </footer>
+
+        <div>
+            {% include 'components/preloader.html' %}
+        </div>
+
+        {% include 'base/parts/foot.html' %}
+    </body>
+
+</html>

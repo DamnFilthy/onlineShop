@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  .header__top {
+    display: none;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__bottom .user-panel .user-lk {
+    display: block;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__logo {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 330px) {
+  .header__logo {
+    font-size: 22px;
+  }
+}

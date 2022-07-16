@@ -1,0 +1,148 @@
+.header {
+  z-index: 1000;
+  position: relative;
+  font-family: 'Roboto', serif;
+  padding: 23px 0;
+  background-color: #BABABA;
+
+  &__logo {
+    transition: .3s ease-in-out;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: none;
+      color: #FFB884;
+    }
+  }
+
+  &__city {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+  }
+
+  &__nav {
+    padding-top: 30px;
+
+    a {
+      transition: .3s ease-in-out;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 23px;
+      color: #FFFFFF;
+
+      svg {
+        transition: .3s ease-in-out;
+      }
+
+      &:hover {
+        stroke: #FFB884;
+        text-decoration: none;
+        color: #FFB884;
+      }
+    }
+  }
+
+  &__top {
+    margin-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    .main-phone {
+      padding-top: 4px;
+      transition: .3s ease-in-out;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+
+      &:hover {
+        text-decoration: none;
+        color: #FFB884;
+      }
+    }
+
+
+    .login-block {
+      a {
+        transition: .3s ease-in-out;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+
+        &:hover {
+          text-decoration: none;
+          color: #FFB884;
+        }
+      }
+
+      span {
+        padding: 0 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #7b6c6c;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    .user-panel {
+      display: flex;
+      align-items: center;
+
+      .user-lk {
+        display: none;
+      }
+
+      &__item {
+        transition: .3s ease-in-out;
+
+        path {
+          transition: .3s ease-in-out;
+        }
+
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          stroke: #FFB884;
+          text-decoration: none;
+          color: #FFB884;
+
+          path {
+            stroke: #FFB884;
+          }
+        }
+
+        .counter {
+          margin-left: 10px;
+          display: block;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.idea
+db.sqlite3
+shop/migrations
+onlineShop/settings.py
+onlineShop-frontend/dist/
+onlineShop-frontend/node_modules/
+onlineShop-frontend/package-lock.json

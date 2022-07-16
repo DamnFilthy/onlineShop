@@ -1,0 +1,14 @@
+.mobile-menu {
+  transition: .9s ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  left: -2000px;
+}
+.menu-show{
+  left: 0;
+}

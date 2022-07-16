@@ -1,0 +1,72 @@
+.label{
+  cursor: pointer;
+}
+.checkbox{
+  display: none;
+}
+.radio{
+  display: none;
+}
+
+.text{
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  &_small{
+    line-height: 17px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  &_white{
+    color: $colorWhite;
+  }
+}
+.text::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $borderGray;
+  top: 5px;
+  left: -10px;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+.text::after{
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -7px;
+  display: block;
+  width: 14px;
+  height: 9px;
+  opacity: 0;
+  transition: .3s all;
+  border-radius: 1px;
+  border-left: 3px solid $checkGray;
+  border-bottom: 3px solid $checkGray;
+  transform: rotate(-45deg);
+}
+.text_red::after{
+    border-left: 3px solid $colorRed;
+    border-bottom: 3px solid $colorRed;
+}
+.checkbox:checked + .text::after{
+  opacity: 1;
+}
+
+
+.default-input{
+  color: $mainWhite;
+  padding: 15px 18px;
+  background-color: $mainBlack;
+  border: 1px solid $colorWhite;
+  border-radius: 5px;
+  max-height: 40px;
+}
+.default-input::placeholder{
+  padding: 15px 18px;
+  font-weight: 300;
+  font-size: 16px;
+}

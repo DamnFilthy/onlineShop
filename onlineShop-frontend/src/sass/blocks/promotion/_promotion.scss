@@ -1,0 +1,103 @@
+.promotion{
+  background: linear-gradient(0deg, #F5F7F9, #F5F7F9), #ECE8E5;
+  padding-bottom: 80px;
+  &__bg{
+    width: 100%;
+    margin-bottom: 74px;
+  }
+  &__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $mainBlack;
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 45px;
+    div:first-child{
+      margin-right: 12px;
+    }
+  }
+}
+
+.calculator{
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F4F7FE;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 47px;
+  &__title{
+    color: $mainBlack;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+}
+
+.dropdown-wrapper{
+  display: flex;
+  .dropdown:not(:last-child){
+    margin-right: 10px;
+  }
+}
+
+.calculator-info{
+  &__title{
+    color: $mainBlack;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 37px;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  &__column{
+    &:first-child{
+      padding-right: 40px;
+    }
+    &:nth-child(2){
+      padding: 0 40px;
+    }
+    &:last-child{
+      padding-left: 40px;
+    }
+    &:not(:last-child){
+      border-right: 1px solid #F0EDEA;
+    }
+    &-title{
+      color: $mainBlack;
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 23px;
+      text-align: center;
+    }
+    &-item{
+      position: relative;
+      color: $mainBlack;
+      font-weight: 300;
+      font-size: 16px;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -12px;
+        width: 5px;
+        height: 5px;
+        background-color: $colorRed;
+        border-radius: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "base/default.html" %}
+
+{% load static %}
+
+{% block title %}MAIN PAGE{% endblock %}
+
+{% block content %}
+<h1>This is main page of the site</h1>
+<a href="/catalog">Каталог</a>
+<div class="container">
+    <h2 class="text-center">Привет Django</h2>
+    <img class="w-50 mx-auto d-block" src="{% static 'media/images/django.png' %}" alt="photo">
+</div>
+
+{% endblock %}

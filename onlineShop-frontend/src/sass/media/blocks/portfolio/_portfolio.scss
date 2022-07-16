@@ -1,0 +1,16 @@
+@media (max-width: 1040px){
+  .portfolio{
+    &__wrapper{
+      overflow-x: auto;
+    }
+  }
+  .portfolio__item{
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 425px){
+  .portfolio__title{
+    font-size: 24px;
+  }
+}

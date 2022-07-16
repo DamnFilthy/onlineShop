@@ -1,0 +1,21 @@
+{% extends "base/default.html" %}
+
+{% block title %}Телефоны{% endblock %}
+
+{% block content %}
+<h2>Телефоны</h2>
+
+{% for phone in phones %}
+<div>
+    <a href="{{phone.name}}">{{phone.name}}</a>
+    <p>{{phone.description}}</p>
+    <p>{{phone.new_price}} Руб.</p>
+    <p>
+        <img src="/{{phone.image}}" alt="">
+    </p>
+</div>
+
+{% endfor %}
+
+<a href="{% url 'index' %}">Home</a>.
+{% endblock %}

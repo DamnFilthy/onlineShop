@@ -1,0 +1,15 @@
+.button{
+  padding: 13px 32px;
+  background-color: $mainWhite;
+  border: 1px solid $colorRed;
+  border-radius: 5px;
+  color: $colorRed;
+  font-weight: 600;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+  &:hover{
+    background-color: $colorRed;
+    box-shadow: 0px 20px 35px -10px rgba(255, 45, 45, 0.5);
+    color: $mainWhite;
+  }
+}

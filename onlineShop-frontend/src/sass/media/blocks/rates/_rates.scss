@@ -1,0 +1,26 @@
+@media (max-width: 900px){
+  .rates__field-title{
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .rates__field-text{
+    font-size: 14px;
+  }
+}
+@media (max-width: 825px){
+  .rates__types div:not(:last-child) {
+    margin-right: 10px;
+  }
+  .item-ok {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 745px){
+  .rates-big{
+    display: none;
+  }
+  .rates-mobile{
+    display: block;
+  }
+}

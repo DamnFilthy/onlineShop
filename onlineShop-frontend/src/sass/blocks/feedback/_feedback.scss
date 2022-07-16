@@ -1,0 +1,23 @@
+.feedback{
+  background-color: $mainBlack;
+  padding: 80px 0;
+  margin-bottom: 80px;
+  &__title{
+    color: $mainWhite;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    div:not(:last-child){
+      margin-right: 20px;
+      div:first-child{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

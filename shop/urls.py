@@ -9,6 +9,6 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('register/', views.register, name='register'),
     path('catalog/', views.catalog, name='catalog'),
-    path('catalog/phones/', views.phones, name='phones'),
-    path('catalog/phones/<str:name>', views.phone_id, name='phone_id'),
+    path('catalog/<str:category>/', views.gadgets, name='gadgets'),
+    path('catalog/<str:category>/<str:name>', views.gadget_id, name='gadget_id'),
 ]

@@ -5,16 +5,26 @@
 {% block title %}CATALOG PAGE{% endblock %}
 
 {% block content %}
+<div>
+    <ul>
+        <li>
+            <a href="/">Главная</a> /
+            <span>Каталог</span>
+        </li>
+    </ul>
+</div>
 <section class="catalog">
     <div class="container">
         <h1>catalog</h1>
-        {% for category in categories %}
-        <a href="{{ category.url }}">
-            <div>{{category.name}}</div>
-            <div>{{category.description}}</div>
-            <img src="/{{category.image}}" alt="">
-        </a>
-        {% endfor %}
+        <div class="catalog__wrapper">
+            {% for category in categories %}
+            <a href="{{ category.url }}" class="catalog__item">
+                <div class="catalog__item-title">{{category.translate_name}}</div>
+                <div class="catalog__item-description">{{category.description}}</div>
+                <img src="/{{category.image}}" alt="">
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </section>
 {% endblock %}

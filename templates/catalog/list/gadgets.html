@@ -1,0 +1,30 @@
+{% extends "base/default.html" %}
+
+{% block title %}{{category.translate_name}}{% endblock %}
+
+{% block content %}
+<div>
+    <ul>
+        <li>
+            <a href="/">Главная</a> /
+            <a href="/catalog">Каталог</a> /
+            <span>{{category.translate_name}}</span>
+        </li>
+    </ul>
+</div>
+<h2>{{category.translate_name}}</h2>
+
+    {% for gadget in gadgets %}
+        <div class="container">
+            <a href="{{gadget.name}}" class="gadget__item" data-id="{{gadget.id}}">
+                <p>{{gadget.name}}</p>
+                <p>{{gadget.description}}</p>
+                <p>{{gadget.new_price}} Руб.</p>
+                <p>
+                    <img src="/{{gadget.image}}" alt="">
+                </p>
+            </a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

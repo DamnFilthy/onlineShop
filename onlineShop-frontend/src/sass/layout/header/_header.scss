@@ -1,9 +1,9 @@
 .header {
+  backdrop-filter: blur(12px);
+  background: -webkit-linear-gradient(315deg, #8f8f8f 25%, #101a4e);
   z-index: 1000;
-  position: relative;
-  font-family: 'Roboto', serif;
-  padding: 23px 0;
-  background-color: #BABABA;
+  font-family: Roboto, serif;
+  padding-top: 10px;
 
   &__logo {
     transition: .3s ease-in-out;
@@ -37,9 +37,9 @@
     a {
       transition: .3s ease-in-out;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 20px;
-      line-height: 23px;
+      line-height: 27px;
       color: #FFFFFF;
 
       svg {
@@ -55,7 +55,7 @@
   }
 
   &__top {
-    margin-bottom: 33px;
+    margin-bottom: 7px;
     display: flex;
     justify-content: space-between;
     align-content: flex-start;

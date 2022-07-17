@@ -1,0 +1,14 @@
+.gadget {
+  &__item {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 300px;
+    margin-bottom: 30px;
+
+    img {
+      max-width: 200px;
+    }
+  }
+}

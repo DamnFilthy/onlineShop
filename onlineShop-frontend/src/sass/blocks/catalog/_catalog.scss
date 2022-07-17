@@ -1,0 +1,30 @@
+.catalog {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 300px;
+    margin-bottom: 30px;
+
+    &-title {
+      text-align: center;
+      font-size: 22px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    &-description {
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: black;
+    }
+  }
+}

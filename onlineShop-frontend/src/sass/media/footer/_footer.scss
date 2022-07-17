@@ -1,10 +1,6 @@
-@media (max-width: 1150px){
-  .footer {
-    padding: 80px 0 25px 0;
-  }
-}
-@media (max-width: 590px){
-  .footer__bottom{
-    padding: 15px 10px 0 10px;
+@media(max-width: 768px) {
+  #footer {
+    font-size: 14px;
+    padding: 10px 0;
   }
 }

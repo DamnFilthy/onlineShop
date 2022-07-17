@@ -5,6 +5,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 class Gadget(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория')
     name = models.CharField(max_length=30, verbose_name='Название')
+    translate_name = models.CharField(max_length=30, blank=True, verbose_name='Перевод названия')
     description = models.CharField(max_length=50, verbose_name='Описание')
     old_price = models.IntegerField(verbose_name='Старая цена')
     new_price = models.IntegerField(verbose_name='Новая цена')
@@ -26,6 +27,7 @@ class Gadget(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название Категории')
+    translate_name = models.CharField(max_length=30, blank=True, verbose_name='Перевод названия')
     description = models.CharField(max_length=300, verbose_name='Описание')
     url = models.CharField(max_length=30, verbose_name='Ссылка', blank=True)
     image = models.ImageField(upload_to='static/media/images', blank=True, verbose_name='Изображение категории')

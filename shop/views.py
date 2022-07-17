@@ -19,11 +19,6 @@ def logout(request):
     return redirect(reverse(index))
 
 
-def catalog(request):
-    categories = Category.objects.all()
-    return render(request, 'catalog/catalog.html', {'categories': categories})
-
-
 def login(request):
     # Если метод не POST то возвращаем пустую форму
     if not request.method == 'POST':
@@ -93,12 +88,19 @@ def register(request):
         return redirect(reverse(error_page))
 
 
-def phones(request):
-    phones = Gadget.objects.all()
-    return render(request, 'catalog/phones/phones.html', {'phones': phones})
+def catalog(request):
+    categories = Category.objects.all()
+    return render(request, 'catalog/catalog.html', {'categories': categories})
 
 
-def phone_id(request, name):
-    current_phone = Gadget.objects.get(name=name)
-    images = GadgetImage.objects.filter(gadget_id=current_phone.id)
-    return render(request, 'catalog/phones/phone_id.html', {'phone': current_phone, 'images': images})
+def gadgets(request, category):
+    category_name = Category.objects.get(name=category)
+    gadgets_to_show = Gadget.objects.filter(category=category_name.id)
+    return render(request, 'catalog/list/gadgets.html', {'gadgets': gadgets_to_show, 'category': category_name})
+
+
+def gadget_id(request, category, name):
+    category = Category.objects.get(name=category)
+    current_gadget = Gadget.objects.get(name=name)
+    images = GadgetImage.objects.filter(gadget_id=current_gadget.id)
+    return render(request, 'catalog/list/gadget_id.html', {'gadget': current_gadget, 'images': images, 'category': category})
